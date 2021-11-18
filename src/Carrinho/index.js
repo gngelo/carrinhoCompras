@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Axios from 'axios'
+
 import './carrinho.css'
 
 const CarrinhoCompras = () => {
@@ -16,28 +16,17 @@ const CarrinhoCompras = () => {
          }
      }, [carrinho])
 
-//    useEffect(() => {
-//         Axios.get('http://localhost:3001/carrinho')
-//             .then((response)=>{
-//                 setCarrinho(response.data);
-//         });
-
-//     }, [carrinho])
-
     function apagar(produto){   
         const index = carrinho.indexOf(produto)
         carrinho.splice(index,1)
         localStorage.setItem('carrinho', JSON.stringify(carrinho))
-        setCarrinho('')
-        
-        //Axios.delete(`http://localhost:3001/carrinho/${produto}`)        
+        setCarrinho('')       
     }
     
     function finalizarPedido(){
         localStorage.setItem("pedido", JSON.stringify(carrinho));
         localStorage.removeItem('carrinho');
         setCarrinho([])
-        //Axios.post('http://localhost:3001/pedido',carrinho)
     }
     
     return (

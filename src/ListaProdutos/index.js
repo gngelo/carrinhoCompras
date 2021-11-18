@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './lista-produtos.css'
-// import Item from '../Item'
+
 
 const ListaProdutos = () => {
 
@@ -23,7 +23,6 @@ const ListaProdutos = () => {
         } 
     }
 
-
     return (
         <div className="lista-produtos">
             <section className="produto">
@@ -38,11 +37,8 @@ const ListaProdutos = () => {
                             <button onClick={()=>adicionar(produto)}>Adicionar</button>
                         </div>
                     </div>
-
                 ))}
-
             </section>   
-            
         </div>
     )
 }
