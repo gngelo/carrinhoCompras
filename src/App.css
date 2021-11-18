@@ -1,0 +1,42 @@
+/*-- Header-- */
+header{ 
+  width: 100vw;
+  height: 15vh;
+
+  background: #f8f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  max-width: 900px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+nav a{
+  text-align: none;
+}
+
+.carrinho{
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  width: 250px;
+  height: 40px;
+}
+.carrinho button{
+  border: 0;
+  border-radius: 8px;
+  background: rgb(131, 131, 197);
+  color: #f8f7f7;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 130px;
+  height: 30px;
+}
